@@ -33,7 +33,10 @@ class PassGen:
     
     def gerar_senha(self, valores):
         char_list = 'QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm0123456789!#%$&*@'
-        random.choices(char_list, k=int()) # Gerar uma quantidade de caracteres, sendo o total deles passado por k=int()
+        chars = random.choices(char_list, k=int(valores['total_chars'])) # Gerar uma quantidade de caracteres, sendo o total deles passado por k=int()
+        # valores['total_chars'] esta passando o total de caracteres escolhidos na aplicacao
+        new_pass = ''.join(chars) # Esta concatendando a string, ou seja tirando os espacos em branco
+        return new_pass
 
     def salvar_senha(self):
         pass
