@@ -13,9 +13,9 @@ class PassGen:
             [sg.Text('Email/Usuario', size=(10,1)), 
             sg.Input(key='usuario', size=(20,1))],
             [sg.Text('Quantidade de Caracteres'), sg.Combo(values=list(range(30)), key='total_chars',
-            default_value=1, size=(3,1) )],
+            default_value=7, size=(3,1) )],
             [sg.Output(size=(32, 5))],
-            [sg.Button('Gerar Senha')]
+            [sg.Button('Gerar Senha'), sg.Button('Salvar')]
         ]
 
         # Exibidando a tela
@@ -29,8 +29,9 @@ class PassGen:
                 break
             if evento == 'Gerar Senha':
                 nova_senha = self.gerar_senha(valores)
-                print(nova_senha)
-    
+                print(nova_senha) 
+            if evento == 'Salvar':
+                self.salvar_senha(nova_senha, valores)
     def gerar_senha(self, valores):
         char_list = 'QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm0123456789!#%$&*@'
         chars = random.choices(char_list, k=int(valores['total_chars'])) # Gerar uma quantidade de caracteres, sendo o total deles passado por k=int()
@@ -38,8 +39,11 @@ class PassGen:
         new_pass = ''.join(chars) # Esta concatendando a string, ou seja tirando os espacos em branco
         return new_pass
 
-    def salvar_senha(self):
-        pass
+    def salvar_senha(self, nova_senha, valores):
+        with open('senhas.txt','a',newline='') as arquivo: 
+            arquivo.write(f'site: {valores[site]}, usuario: {valores[usuario]}, senha: {valores[nova_senha]} \n')
+
+        print('Arquivo Salvo')
 
 gen = PassGen()
 gen.Iniciar()
