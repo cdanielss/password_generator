@@ -54,7 +54,7 @@ class PassGen:
 
     def salvar_senha(self, nova_senha, valores):
         with open('senhas.txt','a',newline='') as arquivo: 
-            arquivo.write(f'site: {valores[site]}, usuario: {valores[usuario]}, senha: {valores[nova_senha]} \n')
+            arquivo.write(f"site: {valores['site']}, usuario: {valores['usuario']}, senha: {nova_senha} \n")
 
         print('Arquivo Salvo')
 
