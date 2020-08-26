@@ -8,7 +8,7 @@ Os recursos disponíveis são:
 - [x] Poder criar senhas com ou sem caracteres especiais.
 - [x] Salvar em um arquivo e ter todas as senhas geradas.
 
-**Instalação**: É necessário ter o Python e a biblioteca PySimpleGUI, com o comando ``` pip3 install pysimplegui ``` você instala a biblioteca. Obs: Também é necessário ter o tkinter, no Ubuntu com o comando ```sudo apt-get install python3-tk```  você instala.
+**Instalação**: É necessário ter o Python e a biblioteca PySimpleGUI, com o comando ``` pip3 install pysimplegui ``` você instala a biblioteca. ***Obs:*** Também é necessário ter o tkinter, no Ubuntu com o comando ```sudo apt-get install python3-tk```  você instala.
 
 
 **Execução**: Com o comando ``` python3 pass.py ``` você executa a aplicação.
