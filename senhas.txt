@@ -1,0 +1,2 @@
+site: facebook, usuario: daniel, senha: 2Uf9ez6vgU 
+site: twiter, usuario: das, senha: cwVMYAr 
