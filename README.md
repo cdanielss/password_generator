@@ -1,4 +1,11 @@
-# Gerador de Senhas
+<h2 align="center">
+  Gerador de Senhas
+</h2>
+
+<h3 align="center">
+    <img alt="Main" width="260" title="#logo" src="./img/PrintPass.png">
+    <br>
+</h3>
 
 O projeto foi feito com a biblioteca PySimpleGUI, esse foi o meu primeiro contato com a Interface Gráfica do Python. 
 
